@@ -1,5 +1,7 @@
 package com.javafy.www.model;
 
+import classification.Classification;
+
 /**
  * Podcast class.
  *
@@ -10,7 +12,7 @@ package com.javafy.www.model;
  *
  */
 
-public class Podcast extends Audio {
+public class Podcast extends Audio implements Classification {
     //Fields
     private final String host;
     private final String guest;
@@ -71,4 +73,32 @@ public class Podcast extends Audio {
         return description;
     }
 
+
+    /**
+     * This method returns the classification of the podcast.
+     * @return classification
+     */
+    @Override
+    public int getClassification() {
+        if(getLikes() >= 10){
+            return 5;
+        }else{
+            return 3;
+        }
+    }
+
+    /**
+     * This method prints the technical sheet of the podcast.
+     */
+    public void showTechnicalSheet(){
+        System.out.println("#############################################");
+        System.out.println("*** PODCAST ***");
+        System.out.println("Title: " + getTitle());
+        System.out.println("Duration: " + getDuration());
+        System.out.println("Host: " + getHost());
+        System.out.println("Guest: " + getGuest());
+        System.out.println("Topic: " + getTopic());
+        System.out.println("Description: " + getDescription());
+        System.out.println("#############################################");
+    }
 }

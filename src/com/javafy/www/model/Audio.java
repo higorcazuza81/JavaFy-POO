@@ -6,23 +6,33 @@ package com.javafy.www.model;
  * @version 1.0 09/13/2023
  * @since 1.0
  */
-public class Audio {
+public abstract class Audio {
     //Fields
     private  String title;
     private  int duration;
     private int likes;
     private int reproductions;
-    private final double classification;
+    private boolean like = false;
 
     //Constructors
+
+    /**
+     * This constructor creates an audio object with the given parameters.
+     */
     public Audio() {
         this.title = "";
         this.duration = 0;
         this.likes = 0;
         this.reproductions = 0;
-        this.classification = 0.0;
     }
-       //Methods
+
+    public Audio(String title, int duration) {
+        this.title = title;
+        this.duration = duration;
+    }
+
+
+    //Methods
 
     /**
      * This method returns the title of the audio file.
@@ -56,29 +66,39 @@ public class Audio {
         return reproductions;
     }
 
-    /**
-     * This method returns the classification of the audio file.
-     * @return classification
-     */
-    public double getClassification() {
-        return classification;
-    }
 
     /**
      * This method is used to set the title of the audio file.
      * @param title
      */
     public void setTitle(String title) {
-        this.title = title;
+        if (title != null && !title.isEmpty()) {
+            this.title = title;
+        } else {
+            System.out.println("Title cannot be null or empty.");
+        }
     }
+        /**
+         * This method is used to set the duration of the audio file.
+         * @param duration
+         */
+        public void setDuration ( int duration){
+            if (duration >= 0) {
+                this.duration = duration;
+            } else {
+                System.out.println("Duration cannot be negative.");
+            }
+        }
+
 
     /**
-     * This method is used to set the duration of the audio file.
-     * @param duration
+     * This method is used show technical sheet of the audio file.
      */
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void showTechnicalSheet() {
+        System.out.println("Title: " + title);
+        System.out.println("Duration: " + duration);
     }
+
 
     /**
     * This method is used to play the audio file.
@@ -93,11 +113,11 @@ public class Audio {
      * This method is used to like the audio file.
      * @param like
      */
-    public void like(boolean like) {
+    public void setlike(boolean like) {
         if (like) {
             likes++;
         }
-
     }
+
 }
 
