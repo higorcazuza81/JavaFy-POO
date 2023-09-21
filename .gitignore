@@ -33,5 +33,6 @@ bin/
 .idea/
 
 ### JavaFy.iml ###
-.iml/
+*.iml
 Javafy.iml
+
