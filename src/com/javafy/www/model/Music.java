@@ -1,6 +1,6 @@
 package com.javafy.www.model;
 
-import classification.Classification;
+import com.javafy.www.classification.Classification;
 
 /**
  * Music class.

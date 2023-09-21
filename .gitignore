@@ -32,3 +32,6 @@ bin/
 .sonarlint/
 .idea/
 
+### JavaFy.iml ###
+.iml/
+Javafy.iml

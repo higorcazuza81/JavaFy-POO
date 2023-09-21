@@ -11,7 +11,7 @@ Este projeto é um desafio do curso de Programação Orientada a Objetos com Jav
     - [Encapsulamento](#encapsulamento)
     - [Construtores](#construtores)
     - [Métodos Getters e Setters](#métodos-getters-e-setters)
-    - [Herança](#herança)
+    - [Herança](#Herança)
     - [Campos](#campos)
     - [Interface e Implementação](#interface-e-implementação)
     - [Polimorfismo](#polimorfismo)
@@ -32,7 +32,7 @@ O projeto consiste em classes que representam diferentes tipos de áudios, como 
 
 ## Abstração
 
-A habilidade de abstração é crucial na construção de software robusto e escalável. Ao utilizar a Programação Orientada a Objetos (POO), conseguimos modelar entidades complexas de forma simplificada. No nosso projeto, vemos como diferentes tipos de áudios (músicas e podcasts) podem herdar características e comportamentos em comum de uma classe mãe abstrata (`Audio`). Isso não apenas facilita o desenvolvimento, mas também torna o código mais fácil de entender e dar manutenção.
+A habilidade de abstração é fundamental na programação orientada a objetos. Neste projeto, podemos observar como diferentes tipos de áudios (músicas e podcasts) podem se valer de uma classe mãe abstrata (Audio) para herdar características e comportamentos em comum. Além disso, a abstração nos permite expandir o projeto no futuro, adicionando novos tipos de áudios, como audiobooks ou videoclipes.
 
 ```java
 public abstract class Audio {
@@ -54,25 +54,20 @@ O encapsulamento foi aplicado ao definir os atributos das classes como privados 
 
 ```java
 public class Music extends Audio implements Classification {
-    //
-    public int getDuration() {
-    return duration;
-}
+    
+   private  String title;
+   private  int duration;
+   private int likes;
+   private int reproductions;
+   private boolean like = false;
 
-public void setDuration(int duration) {
-    if (duration >= 0) {
-        this.duration = duration;
-    } else {
-        System.out.println("Duration cannot be negative.");
-    }
-}
     //
 }
 ```
 
 ## Construtores
 
-A correta utilização de construtores é essencial para a inicialização adequada dos objetos. Na classe Music, observamos dois construtores bem definidos. O primeiro, sem parâmetros, inicializa todos os campos com valores padrão, enquanto o segundo, parametrizado, permite a criação de uma instância com valores específicos. Esta prática não apenas torna o código mais legível, mas também proporciona uma forma intuitiva de criar novos objetos.
+Os construtores desempenham um papel crucial na inicialização dos objetos. No caso da classe Music, temos dois construtores. O primeiro não recebe nenhum parâmetro e inicializa todos os campos com valores padrão. O segundo é parametrizado, recebendo title, duration, artist, album e genre. Ambos são úteis e seguem boas práticas. Além disso, o segundo construtor chama o construtor da classe pai (super(title, duration)), o que é uma prática correta.
 
 ```java
 public class Music extends Audio implements Classification {
@@ -108,12 +103,13 @@ public abstract class Audio {
         }
     }
     //...
-}
+   }
 ```
 
-## Herança e Modificadores de Acesso
 
-A utilização eficaz de herança permite a reutilização de código e a especialização de comportamentos. Neste projeto, vemos como as classes Music e Podcast estendem a classe abstrata Audio, compartilhando características comuns. Além disso, o uso de modificadores de acesso apropriados (como private, protected e public) contribui para a segurança e a proteção dos componentes essenciais do código.
+## Herança
+
+A herança é uma característica essencial da programação orientada a objetos. Neste projeto, vemos como as classes Music e Podcast estendem a classe abstrata Audio. Isso permite a reutilização de código e a especialização de comportamento.
 
 ```java
 public class Music extends Audio implements Classification {
@@ -150,8 +146,9 @@ public int getClassification();
 ```
 ## Polimorfismo
 
-O método theBest foi implementado de forma polimórfica nas classes Music e Podcast. Isso permite que diferentes tipos de objetos forneçam uma classificação com base em critérios específicos.
+O método theBest foi implementado de forma polimórfica nas classes Music e Podcast. Essa abordagem permite que diferentes tipos de objetos, que implementam a interface Classification, possam ser passados como argumento para este método. Isso é um excelente exemplo do bom uso do polimorfismo, pois ele possibilita o uso do método em diferentes tipos de objetos.
 
+Essa implementação polimórfica amplia a capacidade do sistema de lidar com diferentes tipos de áudios de forma coesa e eficaz, proporcionando uma abordagem flexível para a classificação de áudios com base em seus próprios critérios. Isso é uma prática valiosa na Programação Orientada a Objetos, pois promove a reutilização de código e a flexibilidade no design do sistema.
 ```java
 public class TheBest {
 
@@ -170,8 +167,9 @@ public class TheBest {
 Os imports foram organizados de forma limpa e sem duplicações, seguindo as melhores práticas de organização de código.
 
 ```java
-import classification.Classification;
-import com.javafy.www.model.Audio;
+import com.javafy.www.classification.TheBest;
+import com.javafy.www.model.Music;
+import com.javafy.www.model.Podcast;
 // ...
 ```
 
@@ -199,13 +197,13 @@ A saída no console foi formatada de forma clara e informativa. Foram realizados
 
 A aplicação de princípios de POO resulta em um código mais organizado e de fácil manutenção. A distribuição por classes e a utilização adequada de modificadores de acesso facilitam a colaboração em equipe, permitindo que diferentes desenvolvedores trabalhem de forma simultânea e segura em diferentes partes do projeto. Isso elimina a necessidade de copiar e colar código, promovendo uma estrutura de código mais coesa e legível.
 
-##  3. Conclusão
+## 3. Conclusão
 
 A Programação Orientada a Objetos não é apenas uma técnica de programação, mas uma filosofia que promove a organização e a escalabilidade do código. Ao aplicar os princípios de abstração, herança, encapsulamento e polimorfismo, conseguimos criar sistemas mais robustos e flexíveis.
 
 No nosso projeto, isso se traduz em um player de áudio intuitivo e de fácil manutenção. A estrutura bem definida e a clareza na organização do código facilitam a adição de novos recursos e tipos de áudios no futuro.
 
-##  4. Contribuições 
+## 4. Contribuições
 
 Contribuições e feedback são bem-vindos! Se deseja contribuir com melhorias ou correções, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 

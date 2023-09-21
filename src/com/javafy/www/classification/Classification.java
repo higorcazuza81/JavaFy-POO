@@ -1,4 +1,4 @@
-package classification;
+package com.javafy.www.classification;
 
 public interface Classification {
 

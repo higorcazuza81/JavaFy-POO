@@ -1,5 +1,5 @@
 package com.javafy.www.main;
-import classification.TheBest;
+import com.javafy.www.classification.TheBest;
 import com.javafy.www.model.Music;
 import com.javafy.www.model.Podcast;
 
