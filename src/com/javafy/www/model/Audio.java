@@ -1,7 +1,7 @@
 package com.javafy.www.model;
 
 /**
- * This class represents an audio file.
+ * This class represents an audio file
  *
  * @version 1.0 09/13/2023
  * @since 1.0
