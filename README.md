@@ -171,9 +171,7 @@ public class TheBest {
 Os imports foram organizados de forma limpa e sem duplicações, seguindo as melhores práticas de organização de código.
 
 ```java
-import com.javafy.www.classification.TheBest;
-import com.javafy.www.model.Music;
-import com.javafy.www.model.Podcast;
+
 // ...
 ```
 <br><br>
