@@ -7,20 +7,21 @@ Este projeto é um desafio do curso de Programação Orientada a Objetos com Jav
 
 1. [Visão Geral](#visao-geral)
 2. [Principais Destaques de Conceito e Metodologia Aplicada](#destaques)
-   1. [Pacotes](#pacotes)
-   2. [Encapsulamento](#encapsulamento)
-   3. [Construtores](#construtores)
-   4. [Métodos Getters e Setters](#getters-setters)
-   5. [Herança](#herança)
-   6. [Campos](#campos)
-   7. [Interface e Implementação](#interface)
-   8. [Polimorfismo](#polimorfismo)
-   9. [Imports](#imports)
-   10. [Criação de Instâncias e Chamadas de Método](#instancias-metodos)
-   11. [Boas Práticas de Nomeação](#boas-praticas)
-   12. [Clareza de Saídas, Testes e Comentários](#clareza-testes-comentarios)
-   13. [Design e Manutenção de Código](#design-manutencao)
-3. [Conclusão](#conclusao)
+   1. [Abstração](#abstracao)
+   2. [Pacotes](#pacotes)
+   3. [Encapsulamento](#encapsulamento)
+   4. [Construtores](#construtores)
+   5. [Métodos Getters e Setters](#getters-setters)
+   6. [Herança](#herança)
+   7. [Campos](#campos)
+   8. [Interface e Implementação](#interface)
+   9. [Polimorfismo](#polimorfismo)
+   10. [Imports](#imports)
+   11. [Criação de Instâncias e Chamadas de Método](#instancias-metodos)
+   12. [Boas Práticas de Nomeação](#boas-praticas)
+   13. [Clareza de Saídas, Testes e Comentários](#clareza-testes-comentarios)
+   14. [Design e Manutenção de Código](#design-manutencao)
+4. [Conclusão](#conclusao)
 5. [Contribuições](#contribuicoes)
 6. [Licença](#licenca)
 <br><br>
@@ -29,8 +30,9 @@ Este projeto é um desafio do curso de Programação Orientada a Objetos com Jav
 O projeto consiste em classes que representam diferentes tipos de áudios, como músicas e podcasts. Cada áudio possui atributos específicos, como título, duração e classificação. Além disso, a aplicação da interface Classification permite a classificação dos áudios com base em critérios definidos.
 <br><br>
 ## 2. Principais Destaques de Conceito e Metodologia Aplicada <a name="destaques"></a>
+
 <br><br>
-## Abstração
+## Abstração <a name="abstracao"></a>
 
 A habilidade de abstração é fundamental na programação orientada a objetos. Neste projeto, podemos observar como diferentes tipos de áudios (músicas e podcasts) podem se valer de uma classe mãe abstrata (Audio) para herdar características e comportamentos em comum. Além disso, a abstração nos permite expandir o projeto no futuro, adicionando novos tipos de áudios, como audiobooks ou videoclipes.
 
